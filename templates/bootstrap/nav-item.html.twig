@@ -1,0 +1,15 @@
+<li class="nav-item" role="presentation">
+    <a
+        aria-controls="{{ tab.id }}"
+        aria-selected="{% if (loop.first) %}true{% else %}false{% endif %}"
+        class="nav-link{% if (loop.first) %} active{% endif %}"
+        data-bs-toggle="tab"
+        href="#{{ tab.id }}"
+        id="tab-{{ tab.id }}"
+        role="tab"
+    >
+        {{ tab.label }}{% if tab.badge is not null %}
+            <span class="badge badge-pill bg-primary">{{ tab.badge }}</span>
+        {% endif %}
+    </a>
+</li>

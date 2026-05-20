@@ -1,0 +1,8 @@
+<div
+    aria-labelledby="tab-{{ tab.id }}"
+    class="tab-pane{% if (loop.first) %} active{% endif %}"
+    id="{{ tab.id }}"
+    role="tabpanel"
+>
+    {{ tab.content|raw }}
+</div>
